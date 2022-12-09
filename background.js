@@ -1,4 +1,4 @@
-// Load stored preferenced
+// Load stored preferences
 store = new Object();
 
 function updateStore() {
@@ -37,7 +37,7 @@ function doRedirectIfSaved(tabId, server, others) {
     }
   }
 
-  if (redirect.indexOf('://') < 0) {
+  if (redirect && redirect.indexOf('://') < 0) {
     // Add a default protocol
     redirect = "http://" + redirect;
   }
